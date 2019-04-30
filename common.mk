@@ -119,6 +119,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.exynos4
 
+# SamsungServiceMode
+PRODUCT_PACKAGES +=  SamsungServiceMode
+
 # Usb
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-impl \
