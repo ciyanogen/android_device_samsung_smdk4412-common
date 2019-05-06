@@ -120,8 +120,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.exynos4
 
 # SamsungServiceMode
-PRODUCT_PACKAGES +=  SamsungServiceMode
-
+PRODUCT_PACKAGES += \
+    SamsungServiceMode
+    
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
