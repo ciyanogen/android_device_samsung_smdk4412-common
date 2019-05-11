@@ -123,10 +123,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungServiceMode
     
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-    
 # Usb
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-impl \
