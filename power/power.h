@@ -18,10 +18,13 @@
 #define GOV_PERFORMANCE      "performance"
 #define GOV_ONDEMAND         "ondemand"
 #define GOV_PEGASUSQ         "pegasusq"
-#define GOV_DYNAMIC          "dynamic"
 #define GOV_POWERSAVE        "conservative"
 
 #define MS_TO_NS (1000000L)
+
+// Custom Lineage hints
+const static power_hint_t POWER_HINT_CPU_BOOST   = (power_hint_t)0x00000110;
+const static power_hint_t POWER_HINT_SET_PROFILE = (power_hint_t)0x00000111;
 
 enum {
     PROFILE_POWER_SAVE = 0,
@@ -57,23 +60,8 @@ typedef struct governor_settings {
     int cpu_up_rate;
     // wait sampling_rate * cpu_down_rate us before trying to downscale
     int cpu_down_rate;
-    int io_is_busy;
     int sampling_rate; // in microseconds
-    int sampling_down_factor;
-    // Active mode
-    int power_optimal_freq;
-    int sampling_down_factor_relax_khz;
-    int standby_delay_factor;
-    int standby_threshold_freq;
-    int max_non_oc_freq;
-    int oc_freq_boost_ms;
-    // Standby mode
-    int standby_sampling_rate;
-    int standby_sampling_up_factor;
-    // Suspend mode
-    int suspend_sampling_rate;
-    int suspend_sampling_up_factor;
-    int suspend_max_freq;
+    int io_is_busy;
     // boosting
     int boost_freq;
     int boost_mincpus;
